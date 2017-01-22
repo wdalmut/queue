@@ -4,14 +4,7 @@ namespace Corley\Queue;
 
 class Queue
 {
-    /**
-     * @var string
-     */
     private $name;
-
-    /**
-     * @var Adapter\AdapterInterfae
-     */
     private $adapter;
 
     public function __construct($queueName, QueueInterface $adapter)
