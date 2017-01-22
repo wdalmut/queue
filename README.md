@@ -3,6 +3,8 @@
 Adaptable queue layers
 
 [![Build Status](https://travis-ci.org/wdalmut/queue.svg?branch=master)](https://travis-ci.org/wdalmut/queue)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/wdalmut/queue/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/wdalmut/queue/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/wdalmut/queue/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/wdalmut/queue/?branch=master)
 
 ## Create
 
