@@ -2,7 +2,6 @@
     "name": "corley/queue",
     "desciption": "Adaptable queue layers",
     "tags": ["sqs", "queue", "rabbitmq", "zeromq", "mongo"],
-    "require": {},
     "require-dev": {
         "phpunit/phpunit": "~4.0"
     },

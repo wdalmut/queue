@@ -7,8 +7,16 @@ Adaptable queue layers
 ## Create
 
 ```php
-$queue = new Queue("urls", $queueAdapter);
+$queue = new Queue("queue name", $queueAdapter);
 ```
+
+[Check also the wiki](https://github.com/wdalmut/queue/wiki)
+
+### Available Adapters
+
+ * AWS SQS [https://github.com/wdalmut/queue-sqs](https://github.com/wdalmut/queue-sqs)
+ * Internal array [https://github.com/wdalmut/queue-array](https://github.com/wdalmut/queue-array)
+ * [_send an issue/pr to add your adapter here..._](#interface)
 
 ## Receive from queue
 
@@ -37,16 +45,6 @@ $queue->delete($receipt);
 $queue->delete($receipt, ["delay" => 20]);
 ```
 
-# Queue Interface (for adapters)
-
-You have to implement 3 methods from `Corley\Queue\QueueInterface`
-
-```php
-public function send($queueName, $message, array $options);
-public function receive($queueName, array $options);
-public function delete($queueName, $receipt, array $options);
-```
-
 ## Manage different adapters options
 
 Just use functions
@@ -63,4 +61,23 @@ function toSQS(array options = []) {
     return $opts;
 }
 ```
+
+# Queue Interface (for adapters) <a name="interface"></a>
+
+You have to implement 3 methods from `Corley\Queue\QueueInterface`
+
+```php
+public function send($queueName, $message, array $options);
+public function receive($queueName, array $options);
+public function delete($queueName, $receipt, array $options);
+```
+
+# Tips on return values (`receive` message)
+
+As you can see the return value
+
+ * The send operation should return the queue send operation status
+ * The receive *MUST* return an array where the first parameter is the message
+   receipt that is need for the remove operation
+ * The delete operation should return the queue delete operation status
 
