@@ -17,8 +17,9 @@ $queue = new Queue("queue name", $queueAdapter);
 ### Available Adapters
 
  * AWS SQS [https://github.com/wdalmut/queue-sqs](https://github.com/wdalmut/queue-sqs)
- * Internal array [https://github.com/wdalmut/queue-array](https://github.com/wdalmut/queue-array)
  * RabbitMQ [https://github.com/wdalmut/queue-rabbitmq](https://github.com/wdalmut/queue-rabbitmq)
+ * MySQL [https://github.com/wdalmut/queue-mysql](https://github.com/wdalmut/queue-mysql)
+ * Internal array [https://github.com/wdalmut/queue-array](https://github.com/wdalmut/queue-array)
  * [_send an issue/pr to add your adapter here..._](#interface)
 
 ## Receive from queue
